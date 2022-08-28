@@ -6,7 +6,7 @@
     margin: auto;
     font-family: 'Patrick Hand', cursive;
     text-align: center;
-    background-image: url("/public/media/travel.jpeg");
+    background-image: url("travel.jpeg");
     background-size: cover;
     border-radius: 20px;
 }
