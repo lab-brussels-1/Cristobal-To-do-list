@@ -1,0 +1,46 @@
+.container {
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    background-image: url("/public/media/travel.jpeg");
+    background-size: cover;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 50px; 
+    color:rgb(0, 5, 73)
+}
+
+input {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+    height: 35px;
+    font-size: 25px;
+    border-radius: 10px;
+    border-color: rgb(0, 5, 73);
+
+}
+
+.add-item {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4e4caf;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.add-item:hover {
+    background-color: #0c67dd;
+    color: rgb(253, 249, 6);
+}
