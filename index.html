@@ -10,14 +10,17 @@
 </head>
 <body>
     <div id="container" class="container">
-        <h1>My to-do list in Europe</h1>
+        <h1>To-do list for my jorney</h1>
         <div clas="searchBarAndButton">
-        <input type="text" id="userInput" placeholder="What's on your mind? :)">
-        <button class="add-item">Add</button>
-        </div>
-      <ul id="myList">
-      </ul>
+        <form>
+            <p>What do you need to do?</p>
+        <input type="text" id="userInput">
+        <button type="button" id="add-item" class="add-item" onclick="postTodo()">Add task</button>
+        </form>
+        <div id="myList">
       </div>
-    <script src="./src/init.js"></script>    
+    <script src="./src/post.js"></script>    
+    <script src="./src/delete.js"></script>    
+
 </body>
 </html>

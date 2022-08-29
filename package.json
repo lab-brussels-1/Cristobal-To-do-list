@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/samirm00/todolist#readme",
   "dependencies": {
-    "json-server": "^0.17.0"
+    "json-server": "^0.17.0",
+    "server": "^1.0.37"
   }
 }
