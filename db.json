@@ -6,16 +6,6 @@
       "completed": false
     },
     {
-      "id": 2,
-      "text": "reserve a hotel",
-      "completed": false
-    },
-    {
-      "title": "Reserve a car",
-      "completed": false,
-      "id": 3
-    },
-    {
       "title": "Book Disney tickets",
       "completed": false,
       "id": 4

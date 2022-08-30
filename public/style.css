@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+
 .container {
     width: 500px;
     height: 700px;
@@ -9,6 +13,7 @@
     background-image: url("travel.jpeg");
     background-size: cover;
     border-radius: 20px;
+    border: 2px solid black;
 }
 
 h1 {
@@ -36,14 +41,18 @@ input {
 }
 
 .add-item {
-    font-size: 25px;
-    border-radius: 5px;
+    font-size: 20px;
     cursor: pointer;
-    background-color: #4e4caf;
-    color: white;
+    background-color: #dff70e;
+    color: rgb(5, 5, 5);
     text-align: center;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+input[type="text"], textarea {
+    background-color : #a0e1fa; 
 }
 
 .add-item:hover {
@@ -55,5 +64,31 @@ input {
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
-    background-color: rgb(238, 255, 0);
 }
+
+
+.close, .change {
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    cursor: pointer;
+}
+
+.dynamic-buttons {
+    position: static;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #32ec0d;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.dynamic-buttons:hover {
+    background-color: rgb(4, 255, 171);
+    color: rgb(0, 0, 0);
+}
+
+
