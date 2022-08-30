@@ -43,7 +43,7 @@ const postTodo =  async () =>
        div.id = "delete";
        button.className = "dynamic-buttons";
        button.appendChild(txt);
-       button.addEventListener('click', hideIt)
+      // button.addEventListener('click', hideIt)//
        div.appendChild(button);
        myNodelist.appendChild(div);
 
@@ -57,7 +57,15 @@ const postTodo =  async () =>
        div2.appendChild(button2);
        myNodelist.appendChild(div2);
 
-      
+let close = document.getElementsByClassName("delete");
+let i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
 
         }
         
@@ -81,9 +89,6 @@ disableButton.addEventListener("click", (e) => {
 });
 
 
-function hideIt (){
-    let itemToHide = document.getElementsByTagName("ul");
-    itemToHide = this.parentElement;
-    itemToHide.style.display = "none";
-}
+
+
 
