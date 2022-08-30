@@ -6,7 +6,7 @@ const postTodo =  async () =>
         const listContainer = document.getElementById('myList');
         const newList = document.createElement('ul');
         const newListItem = document.createElement('li');
-        const res = await fetch('post.js',
+        const res = await fetch('https://my-json-server.typicode.com/lab-brussels-1/Cristobal-To-do-list/todos',
         
         
         {
