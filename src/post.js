@@ -34,7 +34,7 @@ const postTodo =  async () =>
        const span = document.createElement("span");
        const button = document.createElement("button");
        const txt = document.createTextNode("Delete item");
-       span.className = "close";
+       span.className = "delete";
        button.className = "dynamic-buttons";
        button.appendChild(txt);
        span.appendChild(button);
