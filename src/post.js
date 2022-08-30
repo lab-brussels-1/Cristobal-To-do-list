@@ -6,7 +6,7 @@ const postTodo =  async () =>
         const listContainer = document.getElementById('myList');
         const newList = document.createElement('ul');
         const newListItem = document.createElement('li');
-        const res = await fetch('https://github.com/lab-brussels-1/Cristobal-To-do-list/blob/6afaf0c2181637966f7e93d8ba019f8685ede0b0/db.json#L14',
+        const res = await fetch('post.js',
         
         
         {
