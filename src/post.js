@@ -6,6 +6,10 @@ const postTodo =  async () =>
         const listContainer = document.getElementById('myList');
         const newList = document.createElement('ul');
         const newListItem = document.createElement('li');
+        if (taskToAdd === ""){
+            alert("Please write a note");
+            return;
+        }
         const res = await fetch('https://my-json-server.typicode.com/lab-brussels-1/Cristobal-To-do-list/todos',
         
         
@@ -23,34 +27,37 @@ const postTodo =  async () =>
         // Checking response
         if (res.status === 201)
         {
+
             const data = await res.json();
         // Displaying the data in the browser
             newListItem.innerHTML = data.title;
             newList.appendChild(newListItem);
             listContainer.appendChild(newList);  
-
+           
         // Creating a delete button
        const myNodelist = newListItem;
-       const span = document.createElement("span");
-       const button = document.createElement("button");
-       const txt = document.createTextNode("Delete item");
-       span.className = "delete";
+       let div = document.createElement("div");
+       let button = document.createElement("button");
+       let txt = document.createTextNode("Delete item");
+       div.className = "delete";
+       div.id = "delete";
        button.className = "dynamic-buttons";
        button.appendChild(txt);
-       span.appendChild(button);
-       myNodelist.appendChild(span);
+       button.addEventListener('click', hideIt)
+       div.appendChild(button);
+       myNodelist.appendChild(div);
 
        // Creating a edit button
-       const span2 = document.createElement("span");
-       const button2 = document.createElement("button");
-       const txt2 = document.createTextNode("Modify task");
-       span2.className = "change";
+       let div2 = document.createElement("div");
+       let button2 = document.createElement("button");
+       let txt2 = document.createTextNode("Modify task");
+       div2.className = "change";
        button2.className = "dynamic-buttons";
        button2.appendChild(txt2);
-       span2.appendChild(button2);
-       myNodelist.appendChild(span2);
+       div2.appendChild(button2);
+       myNodelist.appendChild(div2);
 
-        return data;
+      
 
         }
         
@@ -74,6 +81,9 @@ disableButton.addEventListener("click", (e) => {
 });
 
 
-
-
+function hideIt (){
+    let itemToHide = document.getElementsByTagName("ul");
+    itemToHide = this.parentElement;
+    itemToHide.style.display = "none";
+}
 
