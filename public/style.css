@@ -3,7 +3,7 @@
   }
 
 .container {
-    width: 500px;
+    width: 600px;
     height: 700px;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ p {
 input {
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 400px;
     height: 35px;
     font-size: 25px;
     border-radius: 5px;
