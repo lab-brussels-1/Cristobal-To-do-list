@@ -23,16 +23,15 @@ const postTodo =  async () =>
         }
         );
         
-    
         // Checking response
         if (res.status === 201)
         {
 
-            const data = await res.json();
+        const data = await res.json();
         // Displaying the data in the browser
-            newListItem.innerHTML = data.title;
-            newList.appendChild(newListItem);
-            listContainer.appendChild(newList);  
+        newListItem.innerHTML = data.title;
+        newList.appendChild(newListItem);
+        listContainer.appendChild(newList);  
            
         // Creating a delete button
        const myNodelist = newListItem;
@@ -41,54 +40,46 @@ const postTodo =  async () =>
        let txt = document.createTextNode("Delete item");
        div.className = "delete";
        div.id = "delete";
-       button.className = "dynamic-buttons";
+       button.className = "delete-button";
        button.appendChild(txt);
-      // button.addEventListener('click', hideIt)//
        div.appendChild(button);
        myNodelist.appendChild(div);
 
-       // Creating a edit button
+       // creating a edit button
        let div2 = document.createElement("div");
        let button2 = document.createElement("button");
        let txt2 = document.createTextNode("Modify task");
        div2.className = "change";
-       button2.className = "dynamic-buttons";
+       div2.id = "change";
+       button2.className = "change-button";
+       button2.id = "change-button";
+       //button2.addEventListener('click', modifyIt);//
        button2.appendChild(txt2);
        div2.appendChild(button2);
        myNodelist.appendChild(div2);
 
-let close = document.getElementsByClassName("delete");
-let i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
+       // deleting the list items
+       let deleteIt = document.getElementsByClassName("delete");
+       for (i = 0; i < deleteIt.length; i++) {
+       deleteIt[i].onclick = function() {
+       let div = this.parentElement;
+       div.style.display = "none";
+   }   
 }
-
-
-        }
-        
-        else
+}  else
         {
             console.log('Error while posting todo with status : ${res.status}');
             return false;
         }
-        
     }
     catch(err)
     {
         console.error(err);
     }
-    
 }
 const disableButton = document.getElementById("add-item");
 disableButton.addEventListener("click", (e) => {
     e.preventDefault();
     postTodo();
 });
-
-
-
-
 

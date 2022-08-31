@@ -82,7 +82,7 @@ input[type="text"], textarea {
     font-family: 'Patrick Hand', cursive;
 }
 
-.dynamic-buttons {
+.change-button, .delete-button {
     position: static;
     font-size: 18px;
     cursor: pointer;
@@ -95,7 +95,7 @@ input[type="text"], textarea {
     font-family: 'Patrick Hand', cursive;
 }
 
-.dynamic-buttons:hover {
+.change-button:hover, .delete-button:hover {
     background-color: rgb(4, 255, 171);
     color: rgb(0, 0, 0);
 }
