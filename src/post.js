@@ -2,7 +2,7 @@ const postTodo =  async () =>
 {
     try
     {   
-        const taskToAdd = document.getElementById("userInput").value;
+        const taskToAdd = document.getElementById('userInput').value;
         const listContainer = document.getElementById('myList');
         const newList = document.createElement('ul');
         const newListItem = document.createElement('li');
@@ -32,7 +32,7 @@ const postTodo =  async () =>
         // Displaying the data in the browser
         newListItem.innerHTML = data.title;
         newList.appendChild(newListItem);
-        listContainer.appendChild(newList);  
+        listContainer.appendChild(newList); 
            
         // Creating a delete button
        const myNodelist = newListItem;
@@ -56,7 +56,9 @@ const postTodo =  async () =>
        button2.className = "change-button";
        button2.contentEditable = "false";
        button2.id = "change-button";
-      // button2.addEventListener('click', modifyIt)//
+       button2.addEventListener('click', modifyIt)
+       button2.addEventListener('mouseleave', styleItBack)
+       button2.addEventListener('mouseout', onButtonLeave)
        button2.appendChild(txt2);
        div2.appendChild(button2);
        myNodelist.appendChild(div2);
@@ -87,3 +89,26 @@ disableButton.addEventListener("click", (e) => {
     postTodo();
     document.getElementById("userInput").value = "";
 });
+
+
+function modifyIt (){
+    let editable = document.getElementsByTagName("li");
+    editable.contentEditable = "true";
+    myList.style.color = "blue";
+    myList.style.border = "2px solid #0000FF";
+}
+
+function onButtonLeave (){
+    let textButton = document.getElementById("change-button");
+    textButton.innerText = "Save changes";
+}
+
+function styleItBack (){
+    let textButton = document.getElementById("change-button");
+    let setItBack = document.getElementById("myList");
+    setItBack.style.color = "red";
+    setItBack.style.border = "none";
+    textButton.innerHTML = "Modify task";
+}
+
+

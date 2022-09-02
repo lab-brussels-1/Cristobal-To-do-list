@@ -10,7 +10,7 @@
     margin: auto;
     font-family: 'Patrick Hand', cursive;
     text-align: center;
-    background-image: url("travel.jpeg");
+    background-image: url("travel2.jpg");
     background-size: cover;
     border-radius: 20px;
     border: 2px solid black;
@@ -18,8 +18,8 @@
 
 h1 {
     font-size: 50px; 
-    color:rgb(237, 238, 248);
-    background-color: rgb(19, 22, 21);
+    color:rgb(12, 11, 11);
+    background-color: rgb(250, 234, 10);
     padding: 15px;
 }
 
@@ -100,5 +100,3 @@ input[type="text"], textarea {
     color: rgb(0, 0, 0);
     
 }
-
-
