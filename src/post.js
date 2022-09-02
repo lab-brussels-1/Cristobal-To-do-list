@@ -6,6 +6,7 @@ const postTodo =  async () =>
         const listContainer = document.getElementById('myList');
         const newList = document.createElement('ul');
         const newListItem = document.createElement('li');
+        newListItem.contentEditable = "true";
         if (taskToAdd === ""){
             alert("Please write a note");
             return;
@@ -41,6 +42,7 @@ const postTodo =  async () =>
        div.className = "delete";
        div.id = "delete";
        button.className = "delete-button";
+       button.contentEditable = "false";
        button.appendChild(txt);
        div.appendChild(button);
        myNodelist.appendChild(div);
@@ -52,8 +54,9 @@ const postTodo =  async () =>
        div2.className = "change";
        div2.id = "change";
        button2.className = "change-button";
+       button2.contentEditable = "false";
        button2.id = "change-button";
-       //button2.addEventListener('click', modifyIt);//
+      // button2.addEventListener('click', modifyIt)//
        button2.appendChild(txt2);
        div2.appendChild(button2);
        myNodelist.appendChild(div2);
@@ -77,9 +80,10 @@ const postTodo =  async () =>
         console.error(err);
     }
 }
+
 const disableButton = document.getElementById("add-item");
 disableButton.addEventListener("click", (e) => {
     e.preventDefault();
     postTodo();
+    document.getElementById("userInput").value = "";
 });
-
